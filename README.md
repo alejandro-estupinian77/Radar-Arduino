@@ -1,5 +1,5 @@
 # Radar-Arduino
-Página para la venta del Arduino
+Página para la venta del Arduino y código del proyecto
 
 ## Crear un Radar-Alarma con Arduino
 
