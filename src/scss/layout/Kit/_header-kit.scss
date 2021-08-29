@@ -1,0 +1,66 @@
+.header-kit{
+    height: 300px;
+    position: relative;
+
+    video{
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    .overlay-kit{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        height: 300px;
+        background-color: rgba($color: #000000, $alpha: .5);
+        width: 100%;
+    }
+
+    .header-texto{
+        padding-top: 5rem;
+
+        h1, p{
+            position: relative;
+            text-align: center;
+            z-index: 100;
+            color: $blanco;
+        }
+
+        svg{
+            position: relative;
+            z-index: 100;
+        }
+    }
+
+
+    @include tablet{
+        height: 600px;
+
+        video{
+            height: 600px;
+        }
+
+        .overlay-kit{
+            height: 600px;
+        }
+
+        .header-texto{
+            padding-top: 10rem;
+
+            h1{
+                font-size: 8rem;
+            }
+
+            p{
+                font-size: 3.5rem;
+            }
+        }
+
+    }
+}

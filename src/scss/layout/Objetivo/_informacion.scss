@@ -1,0 +1,93 @@
+.mas-informacion{
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+    background-image: url(../../../../build/img/background-wave.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    h2{
+        text-align: center;
+    }
+
+    .contenido-informacion{
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        p{
+            font-weight: $bold;
+            color: $negro;
+            text-align: center;
+        }
+
+        p:last-of-type{
+            font-size: 1.5rem;
+            margin-top: 5rem;
+        }
+
+        form{
+            display: flex;
+
+            label{
+                background-color: $azul-oscuro;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 1rem;
+                border-radius: 5px 0 0 5px;
+            }
+
+            input{
+                outline: none;
+                border: none;
+                padding: 1rem;
+            }
+
+            input[type=email]{
+                background-color: rgb(216, 206, 206);
+            }
+
+            input[type=submit]{
+                background-color: $azul-oscuro;
+                color: $blanco;
+                border-radius: 0 5px 5px 0;
+            }
+
+
+
+        }
+
+        
+    }
+
+    @include computadora{
+
+        h2{
+            text-align: left;
+
+            &::before{
+                content: "";
+                display: block;
+                height: .5rem;
+                width: 5rem;
+                background-color: $negro;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .contenido-informacion{
+            align-items: flex-start;
+
+            p:last-of-type{
+                margin-top: 3rem;
+
+            }
+        }
+
+         
+    }
+
+
+}

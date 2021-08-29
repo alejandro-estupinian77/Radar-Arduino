@@ -1,0 +1,56 @@
+.intro-kit{
+    margin-top: 5rem;
+
+    h2{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .contenido-intro-kit .intro-texto-kit{
+        p{
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    }
+
+    .contenido-intro-kit .ilustracion-intro-kit{
+        display: flex;
+        justify-content: center;
+    }
+
+    @include computadora{
+        h2{
+            font-size: 4rem;
+            text-align: left;
+
+            &::before{
+                content: "";
+                background-color: $negro;
+                height: .5rem;
+                width: 5rem;
+                display: block;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    .contenido-intro-kit{
+        @include computadora{
+            display: flex;
+            gap: 5rem;
+            align-items: center;
+
+            .intro-texto-kit{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                p{
+                    font-size: 2rem;
+                }
+            }
+
+           
+        }
+    }
+}

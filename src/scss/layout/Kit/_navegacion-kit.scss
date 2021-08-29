@@ -1,0 +1,41 @@
+.navegacion-kit{
+    background-color: darken($celeste, 10);
+    padding: 1rem;
+    
+    .contenedor-enlaces{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a{
+            color: $blanco;
+            font-weight: $bold;
+        }
+
+        .compu-nav{
+            display: none;
+        }
+    
+    }
+
+  
+    
+    @include tablet{
+        padding: 1.5rem;
+        .contenedor-enlaces{
+            justify-content: space-around;
+
+            
+            .logo-a, svg{
+                display: none;
+            }
+
+            .compu-nav{
+                display: inline-block;
+            }
+        }
+
+    }
+
+
+}

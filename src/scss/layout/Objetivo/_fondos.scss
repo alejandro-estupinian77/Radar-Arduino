@@ -1,0 +1,121 @@
+.fondos-proyecto{
+    background-color: $celeste;
+
+    .contenedor-fondos{
+        padding-top: 5rem;
+
+        h2{
+            text-align: center;
+            color: $blanco;
+        }
+
+        @include computadora{
+            
+            h2{
+                text-align: left;
+
+                &::before{
+                    content: "";
+                    background-color: $blanco;
+                    height: .5rem;
+                    width: 5rem;
+                    display: block;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+}
+
+.contenido-fondos{
+    margin-top: 3rem;
+    padding-bottom: 4rem;
+
+    .contenido-fondos-texto{
+        margin-bottom: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        a{
+            display: inline-block;
+            text-align: center;
+            color: $blanco;
+            padding: 1.5rem 5rem;
+            border-radius: 5px;
+            transition: .3s ;
+
+            &:hover{
+                background-color: $blanco;
+                color: $celeste;
+                font-weight: $bold;
+            }
+        }
+
+        p{
+            color: $blanco;
+            text-align: center;
+        }
+
+        p:last-of-type{
+            font-weight: $bold;
+
+        }
+    }
+
+    .contenido-fondos-imagenes{
+
+        img{
+            box-shadow: .1rem .2rem .4rem $gris;
+            border-radius: 10px;
+        }
+    }
+
+    @include computadora{
+        margin-top: 5rem;
+
+        @include grid(repeat(2, 1fr), 2rem);
+
+        .contenido-fondos-texto{
+            background-color: $blanco;
+            box-shadow: .1rem .2rem .4rem $gris;
+            border-radius: 10px;
+
+            p{
+                width: 90%;
+            }
+
+
+            p:first-of-type{
+                color: $gris;
+                padding-top: 1.5rem;
+            }
+
+            p:last-of-type{
+                color: $negro;
+                font-weight: $bold;
+            }
+
+            a{
+                color: $celeste;
+
+                &:hover{
+                    background-color: $celeste;
+                    color: $blanco;
+                    font-weight: $bold;
+                }
+            }
+        }
+
+        .contenido-fondos-imagenes{
+            display: flex;
+            justify-content: center;
+
+            img{
+                border-radius: 50%;
+                width: 80%;
+                height: 40rem;
+            }
+        }
+    }
+}

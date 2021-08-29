@@ -1,0 +1,14 @@
+.objetivo-principal{
+    background-color: lighten($azul-oscuro, 10);
+    margin-top: -8rem;
+    position: relative;
+    z-index: 100;
+    border-radius: 5px;
+    box-shadow: .1rem .2rem .4rem $gris;
+
+    p{
+        color: $blanco;
+        text-align: center;
+        padding: 2rem;
+    }
+}

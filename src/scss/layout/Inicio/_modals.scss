@@ -1,0 +1,46 @@
+.modal-robot, .modal-radar, .modal-joystick, .modal-alarma{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: .5);
+    display: none;
+    @include fadeAnimacion;
+
+    .contenedor-close-modal{
+        margin-top: 2.5rem;
+
+        svg{
+            cursor: pointer;
+        }
+    }
+
+    .contenedor-modal-robot{
+        background-color: $blanco;
+        padding: 2rem 5rem;
+        margin-top: 4rem;
+        border-radius: 10px;
+
+        h4{
+            font-size: 4rem;
+            margin: 0;
+        }
+
+        p{
+            font-size: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        img{
+            width: 40rem;
+            height: 20rem;
+            object-fit: cover;
+            object-position: center center;
+            border-radius: 10px;
+            box-shadow: .1rem .2rem .4rem $gris;
+        }
+    }
+
+}
+

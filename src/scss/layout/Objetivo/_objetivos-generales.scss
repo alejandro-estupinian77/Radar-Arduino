@@ -1,0 +1,40 @@
+.objetivos-generales{
+    margin-top: -35rem;
+    position: relative;
+    z-index: 50;
+
+    .contenedor-objetivos{
+        background-color: $celeste;
+        margin-top: -1rem;
+        padding: 2rem 0;
+        
+        .objetivos{
+            @include grid(repeat(2, 1fr), 0);
+            place-items: center;
+
+            .objetivo{
+                p{
+                    color: $blanco;
+                }
+
+                svg{
+                    filter: drop-shadow(.1rem .2rem .4rem $gris);
+                }
+            }
+
+            @include computadora{
+                border-radius: 10px;
+                padding: 2rem 0;
+                background-color: $blanco;
+                display: flex;
+                justify-content: space-evenly;
+
+                .objetivo{
+                    p{
+                        color: $gris;
+                    }
+                }
+            }
+        }
+    }
+}

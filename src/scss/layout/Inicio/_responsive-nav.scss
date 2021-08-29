@@ -1,0 +1,30 @@
+.responsive-nav{
+    padding: 1.5rem;
+    background-color: $azul-oscuro;
+    display: none;
+    @include fadeAnimacion;
+
+    .contenedor-navegacion-responsive{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .enlaces-responsive{
+            display: flex;
+            gap: 3rem;
+
+            
+            a{
+                color: $blanco;
+                font-weight: $bold;
+            }
+        }
+
+        .close{
+            cursor: pointer;
+        }
+    }
+
+
+    
+}

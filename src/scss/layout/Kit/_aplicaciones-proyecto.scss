@@ -1,0 +1,64 @@
+.aplicaciones-proyecto{
+    background-color: $celeste;
+    padding: 7rem 0 3rem 0;
+
+    .contenido-aplicaciones{
+        .header-aplicaciones{
+            h2{
+            font-size: 2.5rem;
+            color: $blanco;
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+      }
+
+        p{
+            color: $blanco;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        @include tablet{
+            .header-aplicaciones{
+                display: flex;
+                justify-content: flex-start;
+
+                h2{
+                    font-size: 4rem;
+    
+                    &::before{
+                        content: "";
+                        display: block;
+                        height: .5rem;
+                        width: 5rem;
+                        margin-bottom: 2rem;
+                        background-color: $blanco;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .aplicaciones{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        padding-bottom: 2rem;
+
+        @include tablet{
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .aplicacion{
+            background-color: $blanco;
+            padding: 4rem;
+            border-radius: 50%;
+            cursor: pointer;
+
+        }
+    }
+}

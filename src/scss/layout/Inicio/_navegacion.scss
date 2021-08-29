@@ -1,0 +1,39 @@
+.header-inicio{
+    background-color: darken($celeste, 10);
+    box-shadow: .1rem .2rem .4rem $gris;
+
+    .navegacion-inicio{
+        padding: 3rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo-a{
+            display: block;
+        }
+
+        svg{
+            cursor: pointer;
+        }
+
+        a{
+            display: none;
+            font-weight: $bold;
+            color: $blanco;
+            font-size: 2rem;
+        }
+
+        @include tablet{
+            display: flex;
+            justify-content: space-evenly;
+            .logo-a, svg{
+                display: none;
+
+            }
+
+            a{
+                display: inline-block;
+            }
+        }
+    }
+}

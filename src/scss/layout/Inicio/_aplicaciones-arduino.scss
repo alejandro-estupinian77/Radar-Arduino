@@ -1,0 +1,41 @@
+.aplicaciones-arduino{
+    padding-top: 8rem;
+
+    h2{
+
+        &::before{
+            content: "";
+            background-color: $negro;
+            height: .5rem;
+            width: 5rem;
+            display: block;
+            margin-bottom: 2rem;
+        }
+    }
+
+    p{
+        text-align: center;
+        margin-top: 4rem;
+    }
+
+    .contenido-aplicaciones-arduino{
+        margin-top: 5rem;
+        @include grid(repeat(2, 1fr), 3rem);
+        gap: 5rem;
+        place-items: center;
+
+        svg{
+            filter: drop-shadow(.1rem .2rem .4rem $gris);
+            cursor: pointer;
+        }
+
+        @include tablet{
+            gap: 3rem;
+            svg{
+                background-color: $celeste;
+                padding: 6rem;
+                border-radius: 50%;
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+.main-contacto{
+    background-image: url(../../../../build/img/contacto_fondo.webp);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+
+    .overlay-contacto{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba($color: #000000, $alpha: .6);
+        z-index: 1;
+    }
+
+    .contenido-contacto{
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1{
+            z-index: 10;
+            color: $blanco;
+        }
+
+        .formulario-contacto{
+            display: flex;
+            margin-top: 5rem;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+
+            label{
+                background-color: $celeste;
+                padding: 0 1rem;
+                border-radius: 5px 0 0 5px;
+            }
+
+            input{
+                padding: 1rem;
+                outline: none;
+                border: none;
+            }
+
+            input[type=submit]{
+                border-radius: 0 5px 5px 0;
+                background-color: $azul-oscuro;
+                color: $blanco;
+                font-weight: $bold;
+            }
+        }
+    }
+}
+
+.contenido-contacto{
+    @include computadora{
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        h1{
+            font-size: 8rem;
+        }
+
+    }
+}

@@ -1,0 +1,2 @@
+function countdown(){const e=new Date("September 6, 2021 00:00:00").getTime()-(new Date).getTime(),t=Math.floor(e/864e5),o=Math.floor(e%864e5/36e5),n=Math.floor(e%36e5/6e4),r=Math.floor(e%6e4/1e3);document.querySelector(".dia").innerText=t,document.querySelector(".hora").innerText=o,document.querySelector(".minutos").innerText=n,document.querySelector(".segundos").innerText=r}setInterval(countdown,1e3);
+//# sourceMappingURL=bundle.js.map

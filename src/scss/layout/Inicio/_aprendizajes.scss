@@ -1,0 +1,48 @@
+.aprendizajes-inicio{
+    width: 100%;
+
+     .contenedor-aprendizajes-texto{
+        background-color: $celeste;
+        margin: -5rem 0;
+
+        h2, p{
+            color: $blanco;
+        }
+
+        h2{
+            &::before{
+                content: "";
+                background-color: $blanco;
+                height: 2rem;
+                width: 5rem;
+                display: block;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .aprendizajes{
+            margin-top: 8rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+            .aprendizaje{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                p{
+                    text-align: center;
+                }
+            }
+
+            @include tablet{
+                @include grid(repeat(3, 1fr), 2rem);
+            }
+        }
+    }
+    
+}

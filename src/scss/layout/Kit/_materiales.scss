@@ -1,0 +1,64 @@
+.materiales-kit{
+    margin-top: -5rem;
+
+    .contenedor-materiales-kit{
+        margin-top: -1rem;
+        padding-top: 2rem;
+        background-color: $celeste;
+
+        h2{
+            font-size: 2.5rem;
+            color: $blanco;
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        @include tablet{
+            h2{
+                text-align: left;
+                font-size: 4rem;
+
+                &::before{
+                    content: "";
+                    display: block;
+                    height: .5rem;
+                    width: 5rem;
+                    background-color: $blanco;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        .materiales{
+            @include grid(repeat(2, 1fr), 5rem);
+            place-items: center;
+
+            .material{
+                p{
+                    color: $blanco;
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+
+                img{
+                    width: 338px;
+                    height: 207px;
+                    object-position: center;
+                    object-fit: cover;
+                }
+
+                svg{
+                    width: 128px;
+                    height: 131px;
+                }
+            }
+
+            @include tablet{
+                @include grid(repeat(4, 1fr), 2rem);
+                gap: 2rem;
+            }
+        }
+    }
+}
+
+

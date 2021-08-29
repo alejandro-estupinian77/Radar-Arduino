@@ -1,0 +1,125 @@
+.precio-venta{
+    margin-top: 8rem;
+    padding-bottom: 4rem;
+
+    h2{
+        text-align: center;
+        margin-bottom: 5rem;
+        font-size: 2.5rem;
+    }
+
+    .contenido-precio-venta .precio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 5rem;
+
+        h3{
+            font-size: 2rem;
+        }
+
+        p{
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .formulario-kit{
+            display: flex;
+            align-items: center;
+
+            label{
+                background-color: $celeste;
+                padding: .45rem 1.5rem;
+                border-radius: 5px 0 0 5px;
+            }
+
+            input{
+                border: none;
+                outline: none;
+                padding: 1rem 2rem;
+            }
+
+            input[type=submit]{
+                border-radius: 0 5px 5px 0;
+                background-color: $azul-oscuro;
+                color: $blanco;
+            }
+
+            
+        }
+    }
+
+    .contenido-precio-venta .venta{
+        h3{
+            font-size: 2rem;
+        }
+
+        p{
+            font-size: 1.5rem;
+            font-weight: $bold;
+        }
+
+        .countdown{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            h4{
+                text-align: center;
+            }
+
+            p{
+                color: $negro;
+                text-align: center;
+            }
+        }
+    }
+
+    @include tablet{
+
+        h2{
+            font-size: 4rem;
+            text-align: left;
+
+            &::before{
+                content: "";
+                display: block;
+                background-color: $negro;
+                width: 5rem;
+                height: .5rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .contenido-precio-venta{
+            @include grid(repeat(2, 1fr), 4rem);
+
+            .precio{
+                border-right: solid 5px $negro;
+                padding-right: 3rem;
+                align-items: flex-start;
+
+                h3{
+                    font-size: 2.5rem;
+                }
+
+                p{
+                    text-align: left;
+                }
+
+            }
+
+            .venta{
+                
+                h3{
+                    text-align: left;
+                    font-size: 2.5rem;
+                }
+            }
+        }
+
+
+    }
+}

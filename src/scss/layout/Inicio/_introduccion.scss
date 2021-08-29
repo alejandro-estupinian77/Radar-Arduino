@@ -1,0 +1,52 @@
+.introduccion-inicio{
+    margin-top: 4rem;
+    height: 700px;
+
+    h1, p{
+        text-align: center;
+    }
+
+    .contenedor-introduccion-texto{
+        margin-bottom: 4rem;
+    }
+
+    .contenedor-introduccion-imagen{
+        position: relative;
+
+        svg{
+            position: absolute;
+            top: 0;
+            right: 0;
+            
+        }
+
+        img{
+            position: absolute;
+            top: 4rem;
+            box-shadow: .1rem .2rem .4rem $gris;
+            border-radius: 10px;
+        }
+    }
+
+    @include computadora{
+        height: 400px;
+        @include grid(repeat(2, 1fr), 3rem);
+
+        svg{
+            width: 700;
+        }
+
+        .contenedor-introduccion-texto{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0;
+
+            h1, p{
+                text-align: left;
+            }
+        }
+       
+    }
+}
