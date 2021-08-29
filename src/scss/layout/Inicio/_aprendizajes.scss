@@ -25,6 +25,8 @@
         }
 
         h2{
+            margin-top: 5rem;
+
             &::before{
                 content: "";
                 background-color: $blanco;

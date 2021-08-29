@@ -16,27 +16,32 @@
         background-color: rgba($color: #000000, $alpha: .6);
     }
 
-    h1{
-        color: $blanco;
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 10rem 25rem;
+    .intro-objetivo-texto{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
 
-
-        @include tablet{
-            font-size: 8rem;
-            padding: 15rem 20rem;
-
-            &::after{
-                content: "";
-                background-color: $blanco;
-                display: block;
-                width: 40rem;
-                height: 1rem;
-                margin-top: 1rem;
+        h1{
+            color: $blanco;
+            position: relative;
     
+    
+            @include tablet{
+                font-size: 8rem;
+                padding: 15rem 20rem;
+    
+                &::after{
+                    content: "";
+                    background-color: $blanco;
+                    display: block;
+                    width: 40rem;
+                    height: 1rem;
+                    margin-top: 1rem;
+        
+                }
             }
         }
     }
+
 }

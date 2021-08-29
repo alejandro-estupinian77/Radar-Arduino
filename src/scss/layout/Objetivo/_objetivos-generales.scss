@@ -1,7 +1,18 @@
 .objetivos-generales{
-    margin-top: -35rem;
     position: relative;
     z-index: 50;
+
+    @include tablet{
+        margin-top: -35rem;
+    }
+
+    .ola{
+        display: none;
+
+        @include tablet{
+            display: block;
+        }
+    }
 
     .contenedor-objetivos{
         background-color: $celeste;
@@ -9,10 +20,14 @@
         padding: 2rem 0;
         
         .objetivos{
-            @include grid(repeat(2, 1fr), 0);
+            @include grid(repeat(1, 1fr), 0);
             place-items: center;
 
             .objetivo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
                 p{
                     color: $blanco;
                 }

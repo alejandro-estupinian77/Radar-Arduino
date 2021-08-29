@@ -509,6 +509,9 @@ h3 {
 .aprendizajes-inicio .contenedor-aprendizajes-texto h2, .aprendizajes-inicio .contenedor-aprendizajes-texto p {
   color: #F6F7EB;
 }
+.aprendizajes-inicio .contenedor-aprendizajes-texto h2 {
+  margin-top: 5rem;
+}
 .aprendizajes-inicio .contenedor-aprendizajes-texto h2::before {
   content: "";
   background-color: #F6F7EB;
@@ -700,12 +703,22 @@ h3 {
   border-radius: 5px;
   align-items: center;
 }
+@media (min-width: 768px) {
+  .footer .contactos-footer form label {
+    border-radius: 5px 0 0 5px;
+  }
+}
 .footer .contactos-footer form input {
   outline: none;
   border: none;
   padding: 1rem 1rem;
   border-radius: 5px;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .footer .contactos-footer form input {
+    border-radius: 0;
+  }
 }
 .footer .contactos-footer form input[type=submit] {
   background-color: #2D728F;
@@ -716,15 +729,14 @@ h3 {
   cursor: pointer;
 }
 @media (min-width: 768px) {
+  .footer .contactos-footer form input[type=submit] {
+    border-radius: 0 5px 5px 0;
+  }
+}
+@media (min-width: 768px) {
   .footer .contactos-footer form {
     flex-direction: row;
     gap: 0;
-  }
-  .footer .contactos-footer form form input[type=submit] {
-    border-radius: 0 5px 5px 0;
-  }
-  .footer .contactos-footer form form label {
-    border-radius: 5px 0 0 5px;
   }
 }
 
@@ -757,19 +769,22 @@ h3 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
 }
-.intro-objetivo h1 {
+.intro-objetivo .intro-objetivo-texto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.intro-objetivo .intro-objetivo-texto h1 {
   color: #F6F7EB;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 10rem 25rem;
+  position: relative;
 }
 @media (min-width: 768px) {
-  .intro-objetivo h1 {
+  .intro-objetivo .intro-objetivo-texto h1 {
     font-size: 8rem;
     padding: 15rem 20rem;
   }
-  .intro-objetivo h1::after {
+  .intro-objetivo .intro-objetivo-texto h1::after {
     content: "";
     background-color: #F6F7EB;
     display: block;
@@ -794,9 +809,21 @@ h3 {
 }
 
 .objetivos-generales {
-  margin-top: -35rem;
   position: relative;
   z-index: 50;
+}
+@media (min-width: 768px) {
+  .objetivos-generales {
+    margin-top: -35rem;
+  }
+}
+.objetivos-generales .ola {
+  display: none;
+}
+@media (min-width: 768px) {
+  .objetivos-generales .ola {
+    display: block;
+  }
 }
 .objetivos-generales .contenedor-objetivos {
   background-color: #25aaf8;
@@ -805,9 +832,15 @@ h3 {
 }
 .objetivos-generales .contenedor-objetivos .objetivos {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   column-gap: 0;
   place-items: center;
+}
+.objetivos-generales .contenedor-objetivos .objetivos .objetivo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .objetivos-generales .contenedor-objetivos .objetivos .objetivo p {
   color: #F6F7EB;
