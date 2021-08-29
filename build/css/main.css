@@ -1393,6 +1393,7 @@ h3 {
   outline: none;
   padding: 1rem 2rem;
   border-radius: 5px;
+  text-align: center;
 }
 .precio-venta .contenido-precio-venta .precio .formulario-kit input[type=submit] {
   background-color: #2D728F;
@@ -1498,24 +1499,42 @@ h3 {
   display: flex;
   margin-top: 5rem;
   align-items: center;
+  flex-direction: column;
+  gap: 2rem;
   position: relative;
   z-index: 10;
 }
 .main-contacto .contenido-contacto .formulario-contacto label {
   background-color: #25aaf8;
   padding: 0 1rem;
-  border-radius: 5px 0 0 5px;
+  border-radius: 5px;
 }
 .main-contacto .contenido-contacto .formulario-contacto input {
   padding: 1rem;
   outline: none;
   border: none;
+  border-radius: 5px;
+  text-align: center;
 }
 .main-contacto .contenido-contacto .formulario-contacto input[type=submit] {
-  border-radius: 0 5px 5px 0;
   background-color: #2D728F;
   color: #F6F7EB;
   font-weight: 700;
+}
+@media (min-width: 768px) {
+  .main-contacto .contenido-contacto .formulario-contacto {
+    flex-direction: row;
+    gap: 0;
+  }
+  .main-contacto .contenido-contacto .formulario-contacto label {
+    border-radius: 5px 0 0 5px;
+  }
+  .main-contacto .contenido-contacto .formulario-contacto input {
+    border-radius: 0;
+  }
+  .main-contacto .contenido-contacto .formulario-contacto input[type=submit] {
+    border-radius: 0 5px 5px 0;
+  }
 }
 
 @media (min-width: 1024px) {

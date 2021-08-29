@@ -31,27 +31,48 @@
             display: flex;
             margin-top: 5rem;
             align-items: center;
+            flex-direction: column;
+            gap: 2rem;
             position: relative;
             z-index: 10;
 
             label{
                 background-color: $celeste;
                 padding: 0 1rem;
-                border-radius: 5px 0 0 5px;
+                border-radius: 5px;
             }
 
             input{
                 padding: 1rem;
                 outline: none;
                 border: none;
+                border-radius: 5px;
+                text-align: center;
             }
 
             input[type=submit]{
-                border-radius: 0 5px 5px 0;
                 background-color: $azul-oscuro;
                 color: $blanco;
                 font-weight: $bold;
             }
+
+        @include tablet{
+            flex-direction: row;
+            gap: 0;
+
+            label{
+                border-radius: 5px 0 0 5px;
+            }
+
+            input{
+                border-radius: 0;
+            }
+
+            input[type=submit]{
+                border-radius: 0 5px 5px 0;
+            }
+        }
+
         }
     }
 }
