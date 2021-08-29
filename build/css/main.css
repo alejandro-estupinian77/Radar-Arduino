@@ -1013,6 +1013,7 @@ h3 {
 }
 .mas-informacion .contenido-informacion form input[type=email] {
   background-color: #d8cece;
+  text-align: center;
 }
 .mas-informacion .contenido-informacion form input[type=submit] {
   background-color: #2D728F;
@@ -1185,8 +1186,18 @@ h3 {
   }
 }
 
-.materiales-kit {
-  margin-top: -5rem;
+@media (min-width: 768px) {
+  .materiales-kit {
+    margin-top: -5rem;
+  }
+}
+.materiales-kit .ola {
+  display: none;
+}
+@media (min-width: 768px) {
+  .materiales-kit .ola {
+    display: block;
+  }
 }
 .materiales-kit .contenedor-materiales-kit {
   margin-top: -1rem;
@@ -1369,21 +1380,38 @@ h3 {
 .precio-venta .contenido-precio-venta .precio .formulario-kit {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  gap: 2rem;
 }
 .precio-venta .contenido-precio-venta .precio .formulario-kit label {
   background-color: #25aaf8;
   padding: 0.45rem 1.5rem;
-  border-radius: 5px 0 0 5px;
+  border-radius: 5px;
 }
 .precio-venta .contenido-precio-venta .precio .formulario-kit input {
   border: none;
   outline: none;
   padding: 1rem 2rem;
+  border-radius: 5px;
 }
 .precio-venta .contenido-precio-venta .precio .formulario-kit input[type=submit] {
-  border-radius: 0 5px 5px 0;
   background-color: #2D728F;
   color: #F6F7EB;
+}
+@media (min-width: 768px) {
+  .precio-venta .contenido-precio-venta .precio .formulario-kit {
+    flex-direction: row;
+    gap: 0;
+  }
+  .precio-venta .contenido-precio-venta .precio .formulario-kit label {
+    border-radius: 5px 0 0 5px;
+  }
+  .precio-venta .contenido-precio-venta .precio .formulario-kit input {
+    border-radius: 0;
+  }
+  .precio-venta .contenido-precio-venta .precio .formulario-kit input[type=submit] {
+    border-radius: 0 5px 5px 0;
+  }
 }
 .precio-venta .contenido-precio-venta .venta h3 {
   font-size: 2rem;
@@ -1420,7 +1448,7 @@ h3 {
   .precio-venta .contenido-precio-venta {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 4rem;
+    column-gap: 2rem;
   }
   .precio-venta .contenido-precio-venta .precio {
     border-right: solid 5px #02020A;

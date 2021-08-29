@@ -28,25 +28,44 @@
         .formulario-kit{
             display: flex;
             align-items: center;
+            flex-direction: column;
+            gap: 2rem;
 
             label{
                 background-color: $celeste;
                 padding: .45rem 1.5rem;
-                border-radius: 5px 0 0 5px;
+                border-radius: 5px;
             }
 
             input{
                 border: none;
                 outline: none;
                 padding: 1rem 2rem;
+                border-radius: 5px;
+            }
+
+            input[type=submit]{
+                background-color: $azul-oscuro;
+                color: $blanco;
+            }
+        
+        @include tablet{
+            flex-direction: row;
+            gap: 0;
+
+            label{
+                border-radius: 5px 0 0 5px;
+            }
+
+            input{
+                border-radius: 0;
             }
 
             input[type=submit]{
                 border-radius: 0 5px 5px 0;
-                background-color: $azul-oscuro;
-                color: $blanco;
             }
 
+        }
             
         }
     }
@@ -94,7 +113,7 @@
         }
 
         .contenido-precio-venta{
-            @include grid(repeat(2, 1fr), 4rem);
+            @include grid(repeat(2, 1fr), 2rem);
 
             .precio{
                 border-right: solid 5px $negro;

@@ -1,5 +1,16 @@
 .materiales-kit{
-    margin-top: -5rem;
+    
+    @include tablet{
+        margin-top: -5rem;
+    }
+
+    .ola{
+        display: none;
+
+        @include tablet{
+            display: block;
+        }
+    }
 
     .contenedor-materiales-kit{
         margin-top: -1rem;
