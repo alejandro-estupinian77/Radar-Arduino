@@ -20,7 +20,7 @@
 
     .contenido-aplicaciones-arduino{
         margin-top: 5rem;
-        @include grid(repeat(2, 1fr), 3rem);
+        @include grid(repeat(1, 1fr), 3rem);
         gap: 5rem;
         place-items: center;
 
@@ -30,6 +30,7 @@
         }
 
         @include tablet{
+            @include grid(repeat(2, 1fr), 3rem);
             gap: 3rem;
             svg{
                 background-color: $celeste;

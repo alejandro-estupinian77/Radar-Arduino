@@ -488,9 +488,23 @@ h3 {
 .aprendizajes-inicio {
   width: 100%;
 }
+.aprendizajes-inicio .ola {
+  display: none;
+}
+@media (min-width: 768px) {
+  .aprendizajes-inicio .ola {
+    display: block;
+  }
+}
 .aprendizajes-inicio .contenedor-aprendizajes-texto {
   background-color: #25aaf8;
-  margin: -5rem 0;
+  padding: 10rem 0 5rem 0;
+}
+@media (min-width: 768px) {
+  .aprendizajes-inicio .contenedor-aprendizajes-texto {
+    margin: -5rem 0;
+    padding-top: 2rem;
+  }
 }
 .aprendizajes-inicio .contenedor-aprendizajes-texto h2, .aprendizajes-inicio .contenedor-aprendizajes-texto p {
   color: #F6F7EB;
@@ -498,7 +512,7 @@ h3 {
 .aprendizajes-inicio .contenedor-aprendizajes-texto h2::before {
   content: "";
   background-color: #F6F7EB;
-  height: 2rem;
+  height: 0.5rem;
   width: 5rem;
   display: block;
   margin-bottom: 2rem;
@@ -528,10 +542,14 @@ h3 {
 }
 
 .proyecto {
-  margin-top: 5rem;
   background-color: #25aaf8;
   padding-top: 8rem;
   width: 100%;
+}
+@media (min-width: 768px) {
+  .proyecto {
+    margin-top: 5rem;
+  }
 }
 .proyecto h2 {
   color: #F6F7EB;
@@ -601,7 +619,7 @@ h3 {
 .aplicaciones-arduino .contenido-aplicaciones-arduino {
   margin-top: 5rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   column-gap: 3rem;
   gap: 5rem;
   place-items: center;
@@ -612,6 +630,9 @@ h3 {
 }
 @media (min-width: 768px) {
   .aplicaciones-arduino .contenido-aplicaciones-arduino {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
     gap: 3rem;
   }
   .aplicaciones-arduino .contenido-aplicaciones-arduino svg {
@@ -669,27 +690,42 @@ h3 {
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
+  flex-direction: column;
+  gap: 2rem;
 }
 .footer .contactos-footer form label {
   padding: 0.65rem 1rem;
   background-color: #2D728F;
   display: flex;
-  border-radius: 5px 0 0 5px;
+  border-radius: 5px;
   align-items: center;
 }
 .footer .contactos-footer form input {
   outline: none;
   border: none;
   padding: 1rem 1rem;
+  border-radius: 5px;
+  text-align: center;
 }
 .footer .contactos-footer form input[type=submit] {
   background-color: #2D728F;
   color: #F6F7EB;
-  border-radius: 0 5px 5px 0;
   transition: 0.3s;
 }
 .footer .contactos-footer form input[type=submit]:hover {
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  .footer .contactos-footer form {
+    flex-direction: row;
+    gap: 0;
+  }
+  .footer .contactos-footer form form input[type=submit] {
+    border-radius: 0 5px 5px 0;
+  }
+  .footer .contactos-footer form form label {
+    border-radius: 5px 0 0 5px;
+  }
 }
 
 @media (min-width: 768px) {

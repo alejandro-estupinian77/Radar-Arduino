@@ -1,9 +1,24 @@
 .aprendizajes-inicio{
     width: 100%;
 
+    .ola{
+        display: none;
+
+        @include tablet{
+            display: block;
+        }
+    }
+
+
      .contenedor-aprendizajes-texto{
         background-color: $celeste;
-        margin: -5rem 0;
+        padding: 10rem 0 5rem 0;
+
+
+        @include tablet{
+            margin: -5rem 0;
+            padding-top: 2rem;
+        }
 
         h2, p{
             color: $blanco;
@@ -13,7 +28,7 @@
             &::before{
                 content: "";
                 background-color: $blanco;
-                height: 2rem;
+                height: .5rem;
                 width: 5rem;
                 display: block;
                 margin-bottom: 2rem;
