@@ -23,6 +23,10 @@
             @include grid(repeat(1, 1fr), 0);
             place-items: center;
 
+            @include tablet{
+                @include grid(repeat(2, 1fr), 0);
+            }
+
             .objetivo{
                 display: flex;
                 justify-content: center;

@@ -782,7 +782,6 @@ h3 {
 @media (min-width: 768px) {
   .intro-objetivo .intro-objetivo-texto h1 {
     font-size: 8rem;
-    padding: 15rem 20rem;
   }
   .intro-objetivo .intro-objetivo-texto h1::after {
     content: "";
@@ -835,6 +834,13 @@ h3 {
   grid-template-columns: repeat(1, 1fr);
   column-gap: 0;
   place-items: center;
+}
+@media (min-width: 768px) {
+  .objetivos-generales .contenedor-objetivos .objetivos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0;
+  }
 }
 .objetivos-generales .contenedor-objetivos .objetivos .objetivo {
   display: flex;
@@ -988,6 +994,8 @@ h3 {
 }
 .mas-informacion .contenido-informacion form {
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 .mas-informacion .contenido-informacion form label {
   background-color: #2D728F;
@@ -995,12 +1003,13 @@ h3 {
   justify-content: center;
   align-items: center;
   padding: 0 1rem;
-  border-radius: 5px 0 0 5px;
+  border-radius: 5px;
 }
 .mas-informacion .contenido-informacion form input {
   outline: none;
   border: none;
   padding: 1rem;
+  border-radius: 5px;
 }
 .mas-informacion .contenido-informacion form input[type=email] {
   background-color: #d8cece;
@@ -1008,7 +1017,21 @@ h3 {
 .mas-informacion .contenido-informacion form input[type=submit] {
   background-color: #2D728F;
   color: #F6F7EB;
-  border-radius: 0 5px 5px 0;
+}
+@media (min-width: 768px) {
+  .mas-informacion .contenido-informacion form {
+    flex-direction: row;
+    gap: 0;
+  }
+  .mas-informacion .contenido-informacion form label {
+    border-radius: 5px 0 0 5px;
+  }
+  .mas-informacion .contenido-informacion form input {
+    border-radius: 0;
+  }
+  .mas-informacion .contenido-informacion form input[type=submit] {
+    border-radius: 0 5px 5px 0;
+  }
 }
 @media (min-width: 1024px) {
   .mas-informacion h2 {

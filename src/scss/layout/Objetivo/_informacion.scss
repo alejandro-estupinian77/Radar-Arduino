@@ -29,6 +29,8 @@
 
         form{
             display: flex;
+            flex-direction: column;
+            gap: 2rem;
 
             label{
                 background-color: $azul-oscuro;
@@ -36,13 +38,16 @@
                 justify-content: center;
                 align-items: center;
                 padding: 0 1rem;
-                border-radius: 5px 0 0 5px;
+                border-radius: 5px;
+
             }
 
             input{
                 outline: none;
                 border: none;
                 padding: 1rem;
+                border-radius: 5px;
+
             }
 
             input[type=email]{
@@ -52,8 +57,24 @@
             input[type=submit]{
                 background-color: $azul-oscuro;
                 color: $blanco;
+            }
+
+        @include tablet{
+            flex-direction: row;
+            gap: 0;
+
+            label{
+                border-radius: 5px 0 0 5px;
+            }
+
+            input{
+                border-radius: 0;
+            }
+
+            input[type=submit]{
                 border-radius: 0 5px 5px 0;
             }
+        }
 
 
 
